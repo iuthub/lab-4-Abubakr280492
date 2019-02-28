@@ -9,10 +9,22 @@
 	<body>
 		<div id="header">
 
-			<h1>190M Music Playlist Viewer</h1>
+			<h1>19
+			0M Music Playlist Viewer</h1>
 			<h2>Search Through Your Playlists and Music</h2>
 		</div>
 
+		<ul>
+			<?php 	
+			$files = glob('songs/*.mp3');
+			foreach ($files as $filename) {
+			 ?>
+			
+			<li>a href="<?= $filename ?>"><?php echo basename($filename); ?><a/></li>
+
+		<?php } ?>
+
+		</ul>
 
 		<div id="listarea">
 			<ul id="musiclist">
